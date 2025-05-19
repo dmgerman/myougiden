@@ -3,8 +3,8 @@ import subprocess
 import os
 import re
 from configparser import ConfigParser
-from distutils.command.install import install
-from distutils.core import setup
+from setuptools.command.install import install
+from setuptools import setup
 
 dirname = os.path.dirname(__file__)
 if dirname != '':
@@ -40,7 +40,7 @@ setup(name='myougiden',
       data_files=[('etc/myougiden/', ['etc/myougiden/config.ini'])],
       license='GPLv3',
       install_requires=[
-          'romkan',
+          'romkan-ng',
           'termcolor',
           ],
       python_requires='>=3',
